@@ -43,7 +43,7 @@ public function getWeatherByCity($city){
     case "showers":
         $weather_img = "rain_light.png";
         break;
-    case: "Light thunderstorms and rain":
+    case "Light thunderstorms and rain":
         $weather_img = "rain_light.png";
         break;
     case "light rain showers":
