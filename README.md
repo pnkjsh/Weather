@@ -33,7 +33,7 @@ Response: 200 - OK
     "week_day": "Friday",
     "local_time": "13:35",
     "condition": "Light thunderstorms and rain",
-    "weather_img": "https://ssl.gstatic.com/onebox/weather/64/.png"
+    "weather_img": "https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
 }
 
 
