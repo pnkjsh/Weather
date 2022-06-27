@@ -10,6 +10,7 @@ public function getWeatherByCity($city){
 	$html = file_get_html($url);
     $div = $html->find('div[class="kvKEAb"]', 0);
     
+    $location = $html->find('span[class="BNeawe tAd8D AP7Wnd"]', 0)->plaintext; 
     $today_temp = $div->find('.iBp4i', 0)->plaintext;
     $_today_update = $div->find('.tAd8D', 0)->plaintext;
     
@@ -49,6 +50,9 @@ public function getWeatherByCity($city){
     case "light rain showers":
         $weather_img = "rain_light.png";
         break;
+    case "clear":
+            $weather_img = "sunny.png";
+        break;
     case "sunny":
         $weather_img = "sunny.png";
         break;
@@ -65,7 +69,7 @@ public function getWeatherByCity($city){
     $weather_img_url = "https://ssl.gstatic.com/onebox/weather/64/".$weather_img;
 
         if($today_temp){
-			$weather_arr = array("city"=>$city, "temp_c"=>$today_temp, "week_day"=>$day, "local_time"=>$localTime, "condition"=>$status[2], "weather_img"=>$weather_img_url);	
+			$weather_arr = array("location"=>$location, "temp_c"=>$today_temp, "week_day"=>$day, "local_time"=>$localTime, "condition"=>$status[2], "weather_img"=>$weather_img_url);	
 			}
 			else{
 			$weather_arr = array("message"=>"Error! No data found");
