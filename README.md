@@ -6,31 +6,31 @@ Weather API Reference
 Weather API provides the weather information fast and easy way without any authentication or API key. It is completely free to use and simple to implement. The Weather API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). Our API has predictable resource-oriented URLs, accepts json request, returns [JSON-encoded](https://www.json.org/json-en.html) responses, and uses standard HTTP response codes, and verbs.
 [More read](https://piuli.iblogger.org/docs/weather)
 
-##Data on UI
+## Data on UI
 
-![weather screen](https://piuli.iblogger.org/docs/weather-api.png)
+<img src="https://piuli.iblogger.org/docs/weather-api.png" alt="weather screen">
 
-#####Base URL
+##### Base URL
 
     https://yourserver.org/api
 
-##Request Endpoints
+## Request Endpoints
 
 Use these enspoints to send requests and replace {location} with your desired location like kolkata, newyork, london, etc. Try to avoid spaces and other unwanted characters.
 
-#####ENDPOINTS
+##### ENDPOINTS
 
         GET /weather/{location}           
         GET /weatherx/{location
 
-##Request-Response
+## Request-Response
 
-#####Request
+##### Request
 | Method | URI |
 | ------ | ------ |
 | GET | [/weather/kolkata](https://piuli.iblogger.org/api/weather/kolkata) |
 
-#####Response
+##### Response
 
         {
             "location": "Kolkata, West Bengal, India",
@@ -41,11 +41,11 @@ Use these enspoints to send requests and replace {location} with your desired lo
             "weather_img": "https://ssl.gstatic.com/onebox/weather/64/rain.png"
         }
 
-#####Request
+##### Request
 | Method | URI |
 | ------ | ------ |
 | GET | [/weather/london](https://piuli.iblogger.org/api/weatherx/london) |
-#####Response
+##### Response
 
     {
             "location": "London, England, United Kingdom",
@@ -142,7 +142,7 @@ Use these enspoints to send requests and replace {location} with your desired lo
             ]
         }
 
-##Javascript Usage
+## Javascript Usage
 
 The fetch() method in JavaScript is used to request to the server and load the information on the webpages. The request can be of any APIs that return the data of the format JSON. XMLHttpRequest, JQuery.ajax, Http-client, Axios, etc. can also be used.
 
@@ -285,10 +285,10 @@ Maximum temperature of the day in celcius.
 
 Minimum temperature of the day in celcius.
 
-##Error
+## Error
 Error occurs when the specified location does not exists, weather data for that location is not available or there is a spelling error.
 
-####Request-Response
+#### Request-Response
 
     
     GET   [base_url]/api/weather/hello
@@ -299,3 +299,4 @@ Error occurs when the specified location does not exists, weather data for that 
         "message": "No city found",
         "city": "hello"
     }
+    
