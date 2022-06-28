@@ -7,12 +7,7 @@ Weather API provides the weather information fast and easy way without any authe
 [More read](https://piuli.iblogger.org/docs/weather)
 
 ## Data on UI
-
-<<<<<<< HEAD
-<img src="https://piuli.iblogger.org/docs/weather-api.png" alt="weather screen">
-=======
 <img src="/images/weather-api.png" alt="weather screen">
->>>>>>> 4a31552 (Code & image uploaded)
 
 ##### Base URL
 
