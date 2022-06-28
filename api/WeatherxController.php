@@ -1,7 +1,7 @@
 <?php
-require './WeatherService.php';
+require './WeatherxService.php';
 
-class WeatherController
+class WeatherxController
 {
     private $requestMethod;
     private $id;
@@ -35,7 +35,7 @@ class WeatherController
 
     private function getLiveWeather($id)
     {
-        $service = new WeatherService();
+        $service = new WeatherxService();
         $result = $service->getWeatherByCity($id);
         if (!$result)
         {
@@ -48,7 +48,7 @@ class WeatherController
 
     private function notFoundResponse()
     {
-        $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
+        $response['status_code_header'] = 'HTTP/1.1 200 OK';
         $response['body'] = null;
         return $response;
     }

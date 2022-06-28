@@ -1,5 +1,5 @@
 <?php
-require './WeatherController.php';
+require './WeatherxController.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -12,15 +12,14 @@ $uri = explode('/', $uri);
 
 // all of our endpoints start with /users
 // everything else results in a 404 Not Found
-if ($uri[2] !== 'weather')
+if ($uri[2] !== 'weatherx')
 {
     header("HTTP/1.1 404 Not Found");
     exit();
 }
 
-// the id is, of course, optional and must be a number:
 $id = null;
-if (isset($uri[3]) && $uri[3] !== 'top')
+if (isset($uri[3]))
 {
     $id = $uri[3];
 }
@@ -28,6 +27,6 @@ if (isset($uri[3]) && $uri[3] !== 'top')
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 
 // pass the request method and id to the WeatherController and process the HTTP request:
-$controller = new WeatherController($requestMethod, $id);
+$controller = new WeatherxController($requestMethod, $id);
 $controller->processRequest();
 ?>

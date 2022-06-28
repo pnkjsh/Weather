@@ -8,7 +8,11 @@ Weather API provides the weather information fast and easy way without any authe
 
 ## Data on UI
 
+<<<<<<< HEAD
 <img src="https://piuli.iblogger.org/docs/weather-api.png" alt="weather screen">
+=======
+<img src="/images/weather-api.png" alt="weather screen">
+>>>>>>> 4a31552 (Code & image uploaded)
 
 ##### Base URL
 
@@ -146,20 +150,20 @@ Use these enspoints to send requests and replace {location} with your desired lo
 
 The fetch() method in JavaScript is used to request to the server and load the information on the webpages. The request can be of any APIs that return the data of the format JSON. XMLHttpRequest, JQuery.ajax, Http-client, Axios, etc. can also be used.
 
-CODE: fetch() example
+##### CODE: fetch() example
 
     fetch("[base_url]/api/weather/paris")
             .then(res=>res.json())
             .then(json=>console.log(json))
 
-CODE: axios example
+##### CODE: axios example
 
     const axios = require('axios');
             axios.get('[base_url]/api/weather/paris').then(res => {        
                 console.log(res.data);
             });
 
-CODE: xhr example
+##### CODE: xhr example
 
     let xhr = new XMLHttpRequest();
             xhr.open('GET', '[base_url]/api/weather/paris');
@@ -170,11 +174,11 @@ CODE: xhr example
               console(xhr.response);
             };
 
-##Command-line Usage
+## Command-line Usage
 
 curl is a command-line tool for transferring data, and it supports almost all protocols, including HTTP. In verbose (-v) mode, the commands provide helpful information such as the resolved IP address, the port we're trying to connect to, and the headers.
 
-CODE: curl example
+##### CODE: curl example
 
     curl -v [base_url]/api/weather/paris  //verbose mode on
             curl [base_url]/api/weather/paris
