@@ -1,6 +1,4 @@
-Weather API Documentation    
-
-Weather API Reference
+Weather API Documentation
 =====================
 
 Weather API provides the weather information fast and easy way without any authentication or API key. It is completely free to use and simple to implement. The Weather API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). Our API has predictable resource-oriented URLs, accepts json request, returns [JSON-encoded](https://www.json.org/json-en.html) responses, and uses standard HTTP response codes, and verbs.
@@ -15,12 +13,12 @@ Weather API provides the weather information fast and easy way without any authe
 
 ## Request Endpoints
 
-Use these enspoints to send requests and replace {location} with your desired location like kolkata, newyork, london, etc. Try to avoid spaces and other unwanted characters.
+Use these endpoints to send requests and replace {location} with your desired location like kolkata, newyork, london, etc. Try to avoid spaces and other unwanted characters.
 
 ##### ENDPOINTS
 
         GET /weather/{location}           
-        GET /weatherx/{location
+        GET /weatherx/{location}
 
 ## Request-Response
 
@@ -43,7 +41,7 @@ Use these enspoints to send requests and replace {location} with your desired lo
 ##### Request
 | Method | URI |
 | ------ | ------ |
-| GET | [/weather/london](https://piuli.iblogger.org/api/weatherx/london) |
+| GET | [/weatherx/london](https://piuli.iblogger.org/api/weatherx/london) |
 ##### Response
 
     {
