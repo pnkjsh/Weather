@@ -9,7 +9,7 @@ class WeatherService
     {
         if ($city)
         {
-            $url = 'https://www.google.com/search?q=weather+' . strtolower($city);
+            $url = base64_decode($this->getBaseUrl()) . strtolower($city);
 
             $html = file_get_html($url);
             $div = $html->find('div[class="kvKEAb"]', 0);
@@ -50,6 +50,10 @@ class WeatherService
         unset($html);
 
         return $weather_arr;
+    }
+
+    private function getBaseUrl(){
+      return "aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cT13ZWF0aGVyKw==";      
     }
 }
 ?>
